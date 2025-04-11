@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $.ajax({
+                type: "GET",
+                url: "http://3.24.240.236/myweb/member_control_api_v1_aws.php?action=getalldata",
+                dataType: "json",
+                success: function(data){
+                    console.log(data);
+                },
+                error: function(){
+                    alert("error");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
